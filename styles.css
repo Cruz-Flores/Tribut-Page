@@ -25,3 +25,34 @@
   max-width: 65%;
   height: auto;
 }
+
+@media (max-width: 1080) {
+  #main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #bec5d4;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+  }
+
+  #img-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e0e6eb;
+    width: 99%;
+  }
+
+  #tribute-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+
+  #image {
+    max-width: 65%;
+    height: auto;
+  }
+}
