@@ -1,58 +1,110 @@
-#main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #bec5d4;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+/* Custom properties/variables  */
+:root {
+  --white: #f2f2f2;
+  --sand: #a6a29f;
+  --rock: #736e6c;
+  --stone: #595451;
+  --brown: #262220;
 }
 
-#img-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #e0e6eb;
-  width: 99%;
+html {
+  /* Set font size for easy rem calculations
+     * default document font size = 16px, 1rem = 16px, 100% = 16px
+     * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+    */
+  font-size: 62.5%;
 }
 
-#tribute-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 50%;
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
 }
 
-#image {
-  max-width: 65%;
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+body {
+  font-family: 'Libre Baskerville';
+  font-size: 1.6rem;
+  /* line-height: 1.5; */
+  text-align: center;
+  color: var(--brown);
+  margin: 0;
+}
+
+main {
+  background-color: var(--white);
+  margin: 1rem 1rem;
+  border-radius: 5px;
+}
+
+@media (max-width: 650px) {
+  main {
+    margin: 0;
+  }
+}
+
+h1 {
+  padding-top: 2rem;
+}
+
+ul {
+  margin: 0 1.5rem;
+}
+
+li {
+  padding-bottom: 2rem;
+}
+
+p {
+  font-family: 'Roboto';
+  text-align: left;
+
+  font-weight: 300;
+}
+
+@media (max-width: 650px) {
+  h1 {
+    margin-top: 0;
+  }
+}
+
+figure {
+  margin: 5rem 1rem 1rem 1rem;
+  background-color: white;
+}
+
+img {
+  margin: 2rem auto;
+  max-width: 1024px;
+  width: 80%;
   height: auto;
 }
 
-@media (max-width: 1080px) {
-  #main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #bec5d4;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1.4rem;
+@media (max-width: 650px) {
+  img {
+    width: 95%;
   }
+}
 
-  #img-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #e0e6eb;
-    width: 99%;
-  }
+figcaption {
+  padding-bottom: 1.5rem;
+  font-family: 'Roboto';
+}
 
-  #tribute-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 90%;
-  }
-
-  #image {
-    max-width: 100%;
-    height: auto;
-  }
+section {
+  max-width: 700px;
+  margin: auto;
 }
